@@ -1,0 +1,29 @@
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'success'">success</div>
+  <div *ngSwitchCase="'info'">info</div>
+  <div *ngSwitchCase="'warning'">warning</div>
+  <div *ngSwitchDefault>danger</div>
+</div>
+
+<div [ngSwitch]="alerta">
+
+<div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+  Well done! You successfully read this important alert message
+</div>
+<div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+  Heads up! This alert needs your attention, but it's not super important.
+</div>
+<div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+  Warning! Better check yourself, you're not looking too good
+</div>
+<div *ngSwitchDefault class="alert alert-danger" role="alert">
+  Oh snap! Change a few things up and try submitting again.
+</div>
+
+</div>
+
+<button (click)="alerta='success'"
+class="btn btn-primary"
+type="button">
+Cambiar
+</button>
